@@ -5,6 +5,7 @@ import "./globals.css";
 const bebasNeue = Bebas_Neue({
   variable: "--bebas-neue",
   subsets: ["latin"],
+  style: ["normal"],
   weight: ["400"],
 });
 
