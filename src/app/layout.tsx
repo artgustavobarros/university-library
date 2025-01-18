@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const bebasNeue = Bebas_Neue({
   variable: "--bebas-neue",
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${ibmPlexSans.className} ${bebasNeue.className} antialiased`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );
