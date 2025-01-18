@@ -6,7 +6,7 @@ import { config } from "@/lib/config";
 import { IKImage, IKUpload, ImageKitProvider } from "imagekitio-next";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "@/hooks/use-toast";
 
 const {
   env: {
@@ -40,7 +40,6 @@ export function ImageUpload({
 }) {
   const ikUploadRef = useRef(null);
   const [file, setFile] = useState<{ filePath: string } | null>(null);
-  const { toast } = useToast();
 
   function onError(error: any) {
     console.log(error);

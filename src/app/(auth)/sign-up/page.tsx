@@ -1,5 +1,6 @@
 "use client";
 import { AuthForm } from "@/components/auth-form";
+import { signUp } from "@/lib/actions/auth";
 import { signUpSchema } from "@/lib/validation";
 
 export default function Page() {
@@ -14,7 +15,7 @@ export default function Page() {
         universityId: 0,
         universityCard: "",
       }}
-      onSubmit={() => {}}
+      onSubmit={signUp}
     />
   );
 }
